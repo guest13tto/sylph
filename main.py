@@ -7,7 +7,9 @@ import asyncio
 import json
 import requests
 import logging
+from dotenv import load_dotenv
 
+load_dotenv()
 logging.basicConfig(level=logging.DEBUG)
 intents = discord.Intents.all()
 intents.message_content = True
@@ -25,7 +27,7 @@ with open("database.json", "r") as f:
 #    await ctx.send(content)
 async def send_message(file = None, content=None, msg = None, channel= None, guild = None,embeds = None):
     guild = guild if msg == None else msg.guild
-    test = True
+    test = False
     if not test or guild is devel_server:
         if guild is devel_server:
             if embeds != None:
