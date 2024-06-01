@@ -1,0 +1,8 @@
+discord
+asyncio
+requests
+logging
+os
+random
+datetime
+json

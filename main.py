@@ -7,9 +7,7 @@ import asyncio
 import json
 import requests
 import logging
-import sqlite3
 
-connection = sqlite3.connect("aquarium.db")
 logging.basicConfig(level=logging.DEBUG)
 intents = discord.Intents.all()
 intents.message_content = True
